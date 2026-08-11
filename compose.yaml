@@ -1,0 +1,16 @@
+services:
+  quant:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./output:/app/output
+
+    env_file:
+      - .env
+
+    working_dir: /app
+    command: quant --help

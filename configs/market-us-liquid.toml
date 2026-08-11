@@ -1,0 +1,5 @@
+[market]
+universe = ["GDX", "GDXJ", "IBB", "ITB", "IYE", "IYR", "KBE", "KRE", "OIH", "SMH", "VNQ", "XHB", "XLB", "XLE", "XLF", "XLI", "XLK", "XLP", "XLU", "XLV", "XLY", "XME", "XOP", "XRT", "XTL"]
+frequency = "daily"
+adjusted = true
+raw_directory = "data/raw"

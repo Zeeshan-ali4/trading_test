@@ -1,0 +1,33 @@
+[experiment]
+name = "technical-v1"
+frequency = "daily"
+signal_time = "market_close"
+execution_time = "next_open"
+horizons = [1, 3, 5]
+
+[market]
+raw_directory = "data/raw"
+universe = ["GDX", "GDXJ", "IBB", "ITB", "IYE", "IYR", "KBE", "KRE", "OIH", "SMH", "VNQ", "XHB", "XLB", "XLE", "XLF", "XLI", "XLK", "XLP", "XLU", "XLV", "XLY", "XME", "XOP", "XRT", "XTL"]
+
+[features]
+momentum_fast_days = 5
+momentum_slow_days = 20
+ma_fast_days = 20
+ma_slow_days = 50
+rsi_days = 14
+atr_days = 14
+volatility_days = 20
+volume_z_days = 20
+
+[strategy]
+max_positions = 5
+holding_days = 5
+min_momentum_20 = 0.0
+min_volume_z = -10.0
+
+[data_versions]
+market = "raw-parquet"
+
+[costs]
+commission_bps = 1.0
+slippage_bps = 5.0
