@@ -17,3 +17,5 @@ def test_html_report_embeds_the_core_charts() -> None:
     assert "id='drawdown-chart'" in report
     assert "id='monthly-chart'" in report
     assert "id='trade-chart'" in report
+    assert "const label=element('text'" in report
+    assert ".append(element('text'" not in report
